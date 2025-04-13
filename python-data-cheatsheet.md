@@ -24,7 +24,3 @@ def ABTest_sample_size(p1, mde, alpha, beta, n_side):
     n_sample = ((z_crit * math.sqrt(2 * p1 * (1 - p1))) + 
                 (z_crit2 * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))))**2 / mde**2
     return math.ceil(n_sample)
-
-## Sample Usage
-n_required = ABTest_sample_size(0.0505, 0.01, 0.05, 0.20, 2)
-print(f"Sample size per group: {n_required}")
